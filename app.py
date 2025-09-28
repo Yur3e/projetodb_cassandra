@@ -16,7 +16,7 @@ cloud_config = {
     'secure_connect_bundle': 'secure-connect-cql-testando.zip'
 }
 
-# Credenciais fornecidas pela configuração do cluster Cassandra
+# Credenciais do cluster Cassandra
 CLIENT_ID = "KEY_PESSOAL"
 CLIENT_SECRET = "KEY_PESSOAL"
 KEYSPACE = 'NOME_PESSOAL'
