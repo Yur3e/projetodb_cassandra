@@ -9,10 +9,9 @@ from cassandra.auth import PlainTextAuthProvider
 cloud_config = {
     'secure_connect_bundle': 'secure-connect-cql-testando.zip'
 }
-CLIENT_ID = "rQRuyUNYDzfZYLDcorLJjhjF"
-CLIENT_SECRET = "v4CHnndgDK315WLNkfwdYs.TX_cGcCZ8Ekn41.JSHAt8A6.H.cmSauHIjdPJhe4JsnKZnUYDkUzkuwFwegXZ6hNT7rfGU9CEBdp+RWLddKYNYi,OshnfRROAEcgifW,6"
-
-KEYSPACE = 'streaming_data'
+CLIENT_ID = "KEY_PESSOAL"
+CLIENT_SECRET = "KEY_PESSOAL"
+KEYSPACE = 'NOME_PESSOAL'
 
 # --- 2. FUNÇÃO PRINCIPAL PARA CONECTAR E PRINTAR ---
 def consultar_dados():
