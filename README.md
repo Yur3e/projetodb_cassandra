@@ -1,4 +1,4 @@
-# Aplicação de Streaming com Flask e Cassandra
+# Simulador de Histórico de visualização de Streaming com Flask e Cassandra
 
 Este projeto é uma aplicação web desenvolvida em **Flask** que simula uma plataforma de streaming de vídeo.  
 A aplicação utiliza o **Apache Cassandra**, através do serviço **DataStax Astra DB**, para gerenciar contas de usuários, perfis e históricos de visualização.
