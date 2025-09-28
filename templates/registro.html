@@ -1,0 +1,35 @@
+{# 
+Template: registro.html
+Propósito: Tela de cadastro de novos usuários.
+Variáveis recebidas:
+    - erro (str, opcional): mensagem de erro caso o e-mail já esteja cadastrado.
+    - url_for('login'): link para voltar à página de login.
+Campos do formulário:
+    - nome (text)
+    - email (email)
+    - senha (password)
+    - pais (text)
+    - idade (number)
+#}
+
+{% extends "base.html" %}
+{% block title %}Registro — Certamente não é a NETFLIX{% endblock %}
+{% block content %}
+<section class="nf-hero">
+    <div class="nf-hero-overlay">
+        <div class="nf-auth-card">
+            <h2>Registrar</h2>
+            {% if erro %}<div class="nf-error">{{ erro }}</div>{% endif %}
+            <form class="nf-form" method="POST">
+                <div class="form-group"><input type="text" name="nome" placeholder="Nome" required></div>
+                <div class="form-group"><input type="email" name="email" placeholder="E-mail" required></div>
+                <div class="form-group"><input type="password" name="senha" placeholder="Senha" required></div>
+                <div class="form-group"><input type="text" name="pais" placeholder="País" required></div>
+                <div class="form-group"><input type="number" name="idade" placeholder="Idade" required></div>
+                <button class="nf-btn-red" type="submit">Registrar</button>
+            </form>
+            <p>Já tem conta? <a class="nf-btn-link" href="{{ url_for('login') }}">Login</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

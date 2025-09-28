@@ -1,0 +1,31 @@
+{# 
+Template: perfil.html
+Propósito: Tela de exibição do histórico de visualização de um perfil específico.
+Variáveis recebidas:
+    - perfil (dict):
+        - user_id (UUID)
+        - nome (str)
+    - historico (iterável de dicts):
+        - titulo (str)
+        - tempo (float, minutos assistidos)
+        - data (datetime)
+Notas:
+    - Caso não haja histórico, exibe "Nenhum histórico ainda."
+#}
+
+{% extends "base.html" %}
+{% block title %}Perfil — {{ perfil.nome }}{% endblock %}
+{% block content %}
+<section class="container nf-details">
+    <h2>Perfil: {{ perfil.nome }}</h2>
+    <ul class="hist-list">
+        {% for item in historico %}
+        <li>
+            <strong>{{ item.titulo }}</strong> - {{item.tempo}} min - {{item.data.replace(microsecond=0)}} <!--Removendo milesimos de segundo-->
+        </li>
+        {% else %}
+        <li>Nenhum histórico ainda.</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

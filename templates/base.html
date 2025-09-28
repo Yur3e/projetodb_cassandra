@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Streaming{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="nf-header">
+    <div class="nf-header-inner container">
+      <!-- Logo clicável volta para a página de conta -->
+      <div class="nf-logo">
+        <a href="{{ url_for('conta') }}">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </a>
+      </div>
+      <nav class="nf-nav">
+        {% if user %}
+          <span class="nf-user">Olá, {{ user.nome }}</span>
+          <a class="nf-btn-link" href="{{ url_for('logout') }}">Sair</a>
+        {% else %}
+          <a class="nf-btn-link" href="{{ url_for('login') }}">Entrar</a>
+          <a class="nf-btn-link" href="{{ url_for('registro') }}">Registrar</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Conteúdo principal ===== -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="nf-footer">
+    &copy; 2025 Cassandra. Todos os direitos reservados ao Grupo 2 :)
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{# 
+Template: login.html
+Propósito: Tela de login para usuários existentes.
+Variáveis recebidas:
+    - erro (str, opcional): mensagem de erro caso as credenciais estejam incorretas.
+    - url_for('registro'): link para a página de registro.
+#}
+
+{% extends "base.html" %}
+{% block title %}Login — Streaming{% endblock %}
+{% block content %}
+<section class="nf-hero">
+    <div class="nf-hero-overlay">
+        <div class="nf-auth-card">
+            <h2>Login</h2>
+            {% if erro %}<div class="nf-error">{{ erro }}</div>{% endif %}
+            <form class="nf-form" method="POST">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="senha" placeholder="Senha" required>
+                </div>
+                <button class="nf-btn-red" type="submit">Entrar</button>
+            </form>
+            <p>Não tem conta? <a class="nf-btn-link" href="{{ url_for('registro') }}">Registrar</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}
