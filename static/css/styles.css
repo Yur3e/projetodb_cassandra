@@ -1,77 +1,230 @@
-:root{
-  --nf-bg: #141414;
-  --nf-dark: #0f0f0f;
-  --nf-red: #e50914;
-  --nf-white: #e6e6e6;
-  --nf-muted: #8c8c8c;
-  --card-shadow: 0 6px 18px rgba(0,0,0,0.6);
+/* ===========================
+   VARIÁVEIS GLOBAIS
+   =========================== */
+:root {
+  --nf-bg: #141414;              /* Cor de fundo principal */
+  --nf-dark: #0f0f0f;            /* Fundo alternativo mais escuro */
+  --nf-red: #e50914;             /* Vermelho característico (Netflix-like) */
+  --nf-white: #e6e6e6;           /* Branco suave (texto) */
+  --nf-muted: #8c8c8c;           /* Cinza para textos secundários */
+  --card-shadow: 0 6px 18px rgba(0,0,0,0.6); /* Sombra padrão dos cards */
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family: "Helvetica Neue", Arial, sans-serif;background:var(--nf-bg);color:var(--nf-white);}
+/* ===========================
+   RESET BÁSICO
+   =========================== */
+* {
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+}
 
-/* Header */
-.nf-header{background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));position:sticky;top:0;z-index:50}
-.nf-header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
-.nf-logo img{height:36px}
-.nf-nav{display:flex;gap:12px;align-items:center}
-.nf-user{margin-right:8px;color:var(--nf-muted)}
-.nf-btn-link{color:var(--nf-white);text-decoration:none;padding:8px 12px;border-radius:4px;opacity:0.9}
-.nf-btn-red{background:var(--nf-red);color:#fff;border:none;padding:8px 14px;border-radius:4px;text-decoration:none;cursor:pointer}
+html, body {
+  height: 100%; 
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--nf-bg); 
+  color: var(--nf-white);
+}
 
-/* Hero / auth backgrounds */
-.nf-hero{
-  min-height:calc(100vh - 80px);
+/* ===========================
+   HEADER
+   =========================== */
+.nf-header {
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)); /* Gradiente sutil */
+  position: sticky; /* Fixa no topo ao rolar */
+  top: 0;
+  z-index: 50; /* Fica acima de outros elementos */
+}
+
+.nf-header-inner {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.nf-logo img {
+  height: 36px; /* Altura do logo */
+}
+
+.nf-nav {
+  display: flex; 
+  gap: 12px; 
+  align-items: center;
+}
+
+.nf-user {
+  margin-right: 8px; 
+  color: var(--nf-muted); /* Nome/usuário em cinza */
+}
+
+.nf-btn-link {
+  color: var(--nf-white);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  opacity: 0.9; /* Leve transparência */
+}
+
+.nf-btn-red {
+  background: var(--nf-red);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ===========================
+   HERO / TELAS DE AUTENTICAÇÃO
+   =========================== */
+.nf-hero {
+  min-height: calc(100vh - 80px); /* Altura total menos o header */
   background-image: url('/static/images/background.jpg');
-  background-size:cover;background-position:center;
-  display:flex;align-items:center;justify-content:center;
+  background-size: cover; 
+  background-position: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
-.nf-hero-overlay{width:100%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:40px 20px}
 
-/* Auth card */
-.nf-auth-card{width:100%;max-width:420px;background:rgba(10,10,10,0.85);padding:32px;border-radius:6px;box-shadow:var(--card-shadow)}
-.nf-auth-card h2{margin:0 0 18px;font-size:24px}
-.nf-form .form-group, .nf-form .form-row{margin-bottom:12px}
-.nf-form input[type="text"], .nf-form input[type="email"], .nf-form input[type="password"], .nf-form input[type="number"]{
-  width:100%;padding:12px;border-radius:4px;border:1px solid #222;background:#111;color:var(--nf-white)
+.nf-hero-overlay {
+  width: 100%;
+  background: rgba(0,0,0,0.6); /* Escurece a imagem */
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 40px 20px;
 }
-.nf-btn-red{display:inline-block;background:var(--nf-red);padding:10px 18px;border-radius:4px;border:0;color:#fff;font-weight:600}
-.nf-error{background:#3a1b1b;color:#ffd2d2;padding:10px;border-radius:4px;margin-bottom:8px;font-size:14px}
 
-/* Home cards */
-.nf-home-hero{padding:40px 0}
-.nf-home-inner{padding:30px}
+/* ===========================
+   CARD DE LOGIN/REGISTRO
+   =========================== */
+.nf-auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10,10,10,0.85); /* Fundo translúcido */
+  padding: 32px;
+  border-radius: 6px;
+  box-shadow: var(--card-shadow);
+}
+
+.nf-auth-card h2 {
+  margin: 0 0 18px; 
+  font-size: 24px;
+}
+
+.nf-form .form-group, 
+.nf-form .form-row {
+  margin-bottom: 12px;
+}
+
+.nf-form input[type="text"], 
+.nf-form input[type="email"], 
+.nf-form input[type="password"], 
+.nf-form input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #222;
+  background: #111;
+  color: var(--nf-white);
+}
+
+.nf-btn-red {
+  display: inline-block;
+  background: var(--nf-red);
+  padding: 10px 18px;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nf-error {
+  background: #3a1b1b;
+  color: #ffd2d2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ===========================
+   HOME / LISTA DE CARDS
+   =========================== */
+.nf-home-hero {
+  padding: 40px 0;
+}
+
+.nf-home-inner {
+  padding: 30px;
+}
+
 .nf-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 200px)); /* limite máximo de 200px */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 200px)); /* Grelha adaptável */
   gap: 16px;
   margin-top: 20px;
-  justify-content: center; /* centraliza os cards no grid */
+  justify-content: center; /* Centraliza os cards */
 }
+
 .nf-card {
   background: #222;
   padding: 26px;
   border-radius: 6px;
-  min-height: 120px; 
+  min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--card-shadow);
 }
 
+/* ===========================
+   DETALHES DE PERFIL
+   =========================== */
+.container.nf-details {
+  padding: 28px;
+  background: transparent;
+}
 
-/* Detalhes */
-.container.nf-details{padding:28px;background:transparent}
-.perfil-block{margin-bottom:20px;border-top:1px solid rgba(255,255,255,0.04);padding-top:12px}
-.hist-list{list-style:none;padding-left:0}
-.hist-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+.perfil-block {
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding-top: 12px;
+}
 
-/* Footer */
-.nf-footer{padding:18px;color:var(--nf-muted);text-align:center;border-top:1px solid rgba(255,255,255,0.03)}
+.hist-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-/* Responsividade */
-@media(max-width:600px){
-  .nf-header-inner{padding:8px}
-  .nf-auth-card{padding:20px}
-  .nf-logo img{height:28px}
+.hist-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.03);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.nf-footer {
+  padding: 18px;
+  color: var(--nf-muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+@media(max-width: 600px) {
+  .nf-header-inner {
+    padding: 8px;
+  }
+  .nf-auth-card {
+    padding: 20px;
+  }
+  .nf-logo img {
+    height: 28px;
+  }
 }
