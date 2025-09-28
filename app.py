@@ -17,9 +17,9 @@ cloud_config = {
 }
 
 # Credenciais fornecidas pela configuração do cluster Cassandra
-CLIENT_ID = "rQRuyUNYDzfZYLDcorLJjhjF"
-CLIENT_SECRET = "v4CHnndgDK315WLNkfwdYs.TX_cGcCZ8Ekn41.JSHAt8A6.H.cmSauHIjdPJhe4JsnKZnUYDkUzkuwFwegXZ6hNT7rfGU9CEBdp+RWLddKYNYi,OshnfRROAEcgifW,6"
-KEYSPACE = 'streaming_data'
+CLIENT_ID = "KEY_PESSOAL"
+CLIENT_SECRET = "KEY_PESSOAL"
+KEYSPACE = 'NOME_PESSOAL'
 
 # ======================
 # CONFIGURAÇÃO DO FLASK
