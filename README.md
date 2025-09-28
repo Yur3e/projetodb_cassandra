@@ -1,2 +1,37 @@
-# projetodb_cassandra
-Projeto de banco de dados com Apache Cassandra, utilizando como cenário um serviço de streaming. Inclui histórico de visualizações, consultas por usuário e ordenação dos vídeos assistidos.
+# Aplicação de Streaming com Flask e Cassandra
+
+Este projeto é uma aplicação web desenvolvida em **Flask** que simula uma plataforma de streaming de vídeo.  
+A aplicação utiliza o **Apache Cassandra**, através do serviço **DataStax Astra DB**, para gerenciar contas de usuários, perfis e históricos de visualização.
+
+---
+
+## Funcionalidades
+
+- **Autenticação de Usuários**: Registro, login e logout.  
+- **Gerenciamento de Contas**: Cada conta pode possuir múltiplos perfis.  
+- **Seleção de Perfis**: Usuários podem escolher um perfil específico para acessar o conteúdo.  
+- **Histórico de Visualização**: Cada perfil mantém seu próprio histórico de vídeos assistidos.  
+
+---
+
+## Tecnologias Utilizadas
+
+- **Backend**: Flask  
+- **Banco de Dados**: Apache Cassandra (DataStax Astra DB)  
+- **Linguagem**: Python 3.8
+- **Driver do Banco de Dados**: cassandra-driver  
+- **Gerenciamento de Segredos**: python-dotenv  
+
+---
+
+## Pré-requisitos
+
+Para executar este projeto localmente, é necessário ter os seguintes itens instalados:
+
+- **Python 3.8.10** ou versão compatível.  
+  - O projeto foi desenvolvido e testado nesta versão.  
+  - O uso de versões muito mais recentes ou antigas pode gerar incompatibilidades.  
+
+- **Conta no DataStax Astra** para criação do banco de dados Cassandra.  
+
+---
