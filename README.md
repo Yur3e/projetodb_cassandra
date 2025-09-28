@@ -20,7 +20,6 @@ A aplicação utiliza o **Apache Cassandra**, através do serviço **DataStax As
 - **Banco de Dados**: Apache Cassandra (DataStax Astra DB)  
 - **Linguagem**: Python 3.8
 - **Driver do Banco de Dados**: cassandra-driver  
-- **Gerenciamento de Segredos**: python-dotenv  
 
 ---
 
