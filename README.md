@@ -28,7 +28,7 @@ A aplicação utiliza o **Apache Cassandra**, através do serviço **DataStax As
 
 Para executar este projeto localmente, é necessário ter os seguintes itens instalados:
 
-- **Python 3.8.10** ou versão compatível.  
+- **Python 3.8.10** (versão recomendada no DataStax).  
   - O projeto foi desenvolvido e testado nesta versão.  
   - O uso de versões muito mais recentes ou antigas pode gerar incompatibilidades.  
 
