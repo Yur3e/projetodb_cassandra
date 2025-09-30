@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Recomendações — {{ usuario }}{% endblock %}
+
+{% block content %}
+<section class="nf-home-inner">
+    <h1>Olá, {{ usuario }}!</h1>
+    <h2>Continuar assistindo</h2>
+
+    <div class="nf-cards nf-recomendacoes">
+        <div class="nf-card">
+            <img src="{{ url_for('static', filename='images/breakingbad.jpg') }}" alt="Breaking Bad">
+            <p class="nf-card-title">Breaking Bad (Série)</p>
+        </div>
+        <div class="nf-card">
+            <img src="{{ url_for('static', filename='images/interstellar.jpg') }}" alt="Interstellar">
+            <p class="nf-card-title">Interstellar (Filme)</p>
+        </div>
+        <div class="nf-card">
+            <img src="{{ url_for('static', filename='images/demonslayer.jpg') }}" alt="Demon Slayer">
+            <p class="nf-card-title">Demon Slayer (Anime)</p>
+        </div>
+        <div class="nf-card">
+            <img src="{{ url_for('static', filename='images/strangerthings.jpg') }}" alt="Stranger Things">
+            <p class="nf-card-title">Stranger Things (Série)</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

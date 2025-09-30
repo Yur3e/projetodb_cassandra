@@ -1,24 +1,17 @@
-{# 
-Template: selecao_perfis.html
-Propósito: Tela de seleção de perfis de uma conta logada.
-Variáveis recebidas:
-    - user (objeto): dados do usuário logado, ex: user.nome
-    - perfis (iterável): lista de perfis disponíveis para a conta, cada item com:
-        - user_id (UUID)
-        - nome (str)
-#}
-
 {% extends "base.html" %}
 {% block title %}Seleção de Perfis — Streaming{% endblock %}
 {% block content %}
 <section class="nf-home-hero">
     <div class="nf-home-inner container">
-        <h1>Olá, {{ user.nome }}!</h1>
-        <p>Escolha um perfil para continuar:</p>
+        <h1>Quem está assistindo?</h1>
+
         <div class="nf-cards">
             {% for profile in perfis %}
-            <div class="nf-card">
-                <a href="{{ url_for('perfil', user_id=profile.user_id) }}">{{ profile.nome }}</a>
+            <div class="nf-card nf-profile-card">
+                <a href="{{ url_for('perfil', user_id=profile.user_id) }}">
+                    <img src="{{ url_for('static', filename=profile.avatar) }}" alt="{{ profile.nome }}">
+                    <span>{{ profile.nome }}</span>
+                </a>
             </div>
             {% endfor %}
         </div>

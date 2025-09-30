@@ -1,7 +1,7 @@
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 
-# ====== REQUISITOS QUE USEI NO MEU VENV ======
+# ====== REQUISITOS QUE USAMOS NO VENV ======
 # Requisito 1: python 3.8.10
 # Requisito 2: pip install cassandra-driver==3.24.0
 
@@ -9,9 +9,10 @@ from cassandra.auth import PlainTextAuthProvider
 cloud_config = {
     'secure_connect_bundle': 'secure-connect-cql-testando.zip'
 }
-CLIENT_ID = "KEY_PESSOAL"
-CLIENT_SECRET = "KEY_PESSOAL"
-KEYSPACE = 'NOME_PESSOAL'
+CLIENT_ID = "rQRuyUNYDzfZYLDcorLJjhjF"
+CLIENT_SECRET = "v4CHnndgDK315WLNkfwdYs.TX_cGcCZ8Ekn41.JSHAt8A6.H.cmSauHIjdPJhe4JsnKZnUYDkUzkuwFwegXZ6hNT7rfGU9CEBdp+RWLddKYNYi,OshnfRROAEcgifW,6"
+
+KEYSPACE = 'streaming_data'
 
 # --- 2. FUNÇÃO PRINCIPAL PARA CONECTAR E PRINTAR ---
 def consultar_dados():
